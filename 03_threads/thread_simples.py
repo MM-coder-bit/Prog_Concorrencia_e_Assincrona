@@ -7,7 +7,7 @@ def main():
     th.start() # Adiciona a thread na pool de threads prontos para execuçao
 
     print('Podemos fazer outras coisas no programa enquanto o thread vai executando...')
-    print('Mateus Marques' * 2)
+    print('Mateus Marques ' * 2)
 
     th.join() # Avisa para ficar aguardando aqui até a thread terminar a execução
 

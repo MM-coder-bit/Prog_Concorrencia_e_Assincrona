@@ -10,7 +10,16 @@ def main():
 
     inicio = datetime.datetime.now()  # Marca o tempo de início da execução.
 
-    el.run_until_complete(computar(inicio=1, fim=50_000_000))
+    #el.run_until_complete(computar(inicio=1, fim=50_000_000))
+
+    tarefa1 = el.create_task(computar(inicio=1         , fim=10_000_000))
+    tarefa2 = el.create_task(computar(inicio=10_000_001, fim=20_000_000))
+    tarefa3 = el.create_task(computar(inicio=20_000_001, fim=30_000_000))
+    tarefa4 = el.create_task(computar(inicio=30_000_001, fim=40_000_000))
+    tarefa5 = el.create_task(computar(inicio=40_000_001, fim=50_000_000))
+
+    tarefas = asyncio.gather(tarefa1, tarefa2, tarefa3, tarefa4, tarefa5)
+    el.run_until_complete(tarefas)
 
     tempo = datetime.datetime.now() - inicio  # Calcula a duração da execução.
 
@@ -29,5 +38,13 @@ if __name__ =='__main__':
     main()
 
 '''
-Terminou em 12.18 segundos
+Terminou em 12.18 segundos 
+    - execução do 'el.run_until_complete(computar(inicio=1, fim=50_000_000))'
+
+Terminou em 12.94 segundos
+    - execução do  ' tarefa1 = el.create_task(computar(inicio=1         , fim=10_000_000)) '
+                   ' tarefa2 = el.create_task(computar(inicio=10_000_001, fim=20_000_000)) '
+                   ' tarefa3 = el.create_task(computar(inicio=20_000_001, fim=30_000_000)) '
+                   ' tarefa4 = el.create_task(computar(inicio=30_000_001, fim=40_000_000)) '
+                   ' tarefa5 = el.create_task(computar(inicio=40_000_001, fim=50_000_000)) '
 '''

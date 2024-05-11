@@ -1,3 +1,5 @@
+#  python -m cprofile -o python_padrao2.profile python_padrao_2.py 
+
 import datetime
 import math
 

@@ -41,6 +41,5 @@ if __name__ =='__main__':
     ps.print_stats()
     print(sec.getvalue())
 
-'''
-Terminou em 10.07 segundos
-'''
+# execute esse comando  para visualizar 
+# snakeviz python_padrao1.stats

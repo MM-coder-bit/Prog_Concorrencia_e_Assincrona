@@ -1,0 +1,2 @@
+ - Para compilar o arquivo pyx 
+python 00_setup.py build_ext --inplace

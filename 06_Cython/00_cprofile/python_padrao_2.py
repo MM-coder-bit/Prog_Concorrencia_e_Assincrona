@@ -1,4 +1,5 @@
-#  python -m cprofile -o python_padrao2.profile python_padrao_2.py 
+# python -m cProfile -o python_padrao2.profile python_padrao_2.py 
+# snakeviz python_padrao2.profile
 
 import datetime
 import math
@@ -21,7 +22,3 @@ def computar(fim, inicio=1):
 
 if __name__ =='__main__':
     main()
-
-'''
-Terminou em 10.07 segundos
-'''

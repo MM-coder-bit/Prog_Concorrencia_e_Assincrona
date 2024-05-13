@@ -10,7 +10,7 @@ def main():
 
     tempo = datetime.datetime.now() - inicio
 
-    print(f"Terminou em {tempo.total_seconds():.2f} segundos")
+    print(f"Terminou em {tempo.total_seconds():.2f} segundos ")
 
 if __name__ =='__main__':
     main()
